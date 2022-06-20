@@ -2,11 +2,12 @@ import React from 'react'
 import '../Card.css'
 import Animal from '../Data/Animal.js'
 
+const uncovered = false;
+
 export default function Card() {
 
   const elephant = new Animal('Elefant', 'placeholder.png', 3.3, 6000, 70, 1, 40);
-  
-  return (
+  const front = (
     <div className='card'>
     <h1>{elephant.name}</h1>
     <img alt="Elefant" height="200" width="200" src="https://picsum.photos/200/300" />
@@ -17,7 +18,7 @@ export default function Card() {
             return (
               <tr key={property}>
                 <td>{animalProperty.label}</td>
-                <td>
+                <td>                                     {/* ???????  */}
                   {elephant[property]}&nbsp;
                   {animalProperty.unit}
                 </td>
@@ -33,4 +34,12 @@ export default function Card() {
     </table>
     </div>
   );
+
+  const back = <div className='card back' />
+  
+  if (uncovered) {
+    return front;
+  } else {
+    return back;
+  }
 }
