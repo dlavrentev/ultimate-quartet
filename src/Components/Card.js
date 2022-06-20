@@ -4,7 +4,7 @@ import Animal from '../Data/Animal.js'
 
 export default function Card() {
 
-  const elephant = new Animal('Elephant', 'placeholder.png', 3.3, 6000, 70, 1, 40,);
+  const elephant = new Animal('Elefant', 'placeholder.png', 3.3, 6000, 70, 1, 40,);
   
   return (
     <div className='card'>
