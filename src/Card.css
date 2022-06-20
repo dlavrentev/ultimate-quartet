@@ -31,4 +31,7 @@ img {
     margin-bottom: 10px;
 }
 
-
+.back {
+    height: 388px;
+    background-color: green;
+}
