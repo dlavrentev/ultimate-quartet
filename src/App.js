@@ -1,6 +1,8 @@
+import React from 'react';
 import './Style.css';
 import Card from './Components/Card';
 import Animal from './Data/Animal';
+import Game from './Components/Game';
 
 function App() {
 
@@ -9,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <h1>Ultimate Quartet</h1>
-      <Card animal={animal} uncovered />
+      <Game title ="Supertrumpf" />
     </div>
   );
 }
