@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import 'Game.css'
+import './../Css/Game.css';
 import Card from './Card.js';
 import Animal from '../Data/Animal.js';
 
