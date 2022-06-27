@@ -4,14 +4,18 @@ import Card from './Card.js';
 import Animal from '../Data/Animal.js';
 
 export default class Game extends Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            playersTurn: true,
+            player: [new Animal('Elefant', 'placeholder.png', 3.3, 6000, 70, 1, 40)],
+            computer : [new Animal('Nashorn', 'placeholder.png', 1.9, 2300, 50, 1, 50)],
+        };
+    }
+
   render() {
-    const playersTurn = true;
-    const player = [
-        new Animal('Elefant', 'placeholder.png', 3.3, 6000, 70, 1, 40)
-    ];
-    const computer = [
-        new Animal('Nashorn', 'placeholder.png', 1.9, 2300, 50, 1, 50)
-    ]
+    const {playersTurn, player, computer} = this.state;
     return (
       <div>
         <div className='info'>
