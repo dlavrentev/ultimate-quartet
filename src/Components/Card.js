@@ -4,13 +4,15 @@ import Animal from '../Data/Animal.js'
 
 const uncovered = false;
 
-export default function Card() {
+export default function Card({animal, uncovered}) {
 
   const elephant = new Animal('Elefant', 'placeholder.png', 3.3, 6000, 70, 1, 40);
   const front = (
     <div className='card'>
-    <h1>{elephant.name}</h1>
-    <img alt="Elefant" height="200" width="200" src="https://picsum.photos/200/300" />
+    <h1>{animal.name ? animal.name : 'Unbekannt'}</h1>
+    {animal.image && (
+      <img alt="Elefant" height="200" width="200" src="https://picsum.photos/200/300" />
+    )}
     <table>
         <tbody>
           {Object.keys(Animal.properties).map(property => {
@@ -18,10 +20,7 @@ export default function Card() {
             return (
               <tr key={property}>
                 <td>{animalProperty.label}</td>
-                <td>                                     {/* ???????  */}
-                  {elephant[property]}&nbsp;
-                  {animalProperty.unit}
-                </td>
+                <td>{elephant[property]}&nbsp;{animalProperty.unit}</td> {/* ???????  */}
               </tr>
             );
           })}
