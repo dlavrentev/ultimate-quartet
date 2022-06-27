@@ -1,10 +1,16 @@
 import React from 'react'
 import '../Card.css'
 import Animal from '../Data/Animal.js'
+import PropTypes from 'prop-types';
 
 const uncovered = false;
 
 export default function Card({animal, uncovered}) {
+
+  Card.propTypes = {
+    uncovered: PropTypes.bool.isRequired,
+    animal: PropTypes.object.isRequired,
+  };
 
   const elephant = new Animal('Elefant', 'placeholder.png', 3.3, 6000, 70, 1, 40);
   const front = (
