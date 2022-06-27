@@ -1,6 +1,6 @@
-import React from 'react'
-import '../Card.css'
-import Animal from '../Data/Animal.js'
+import React from 'react';
+import './../Css/Card.css';
+import Animal from '../Data/Animal.js';
 import PropTypes from 'prop-types';
 
 const uncovered = false;
